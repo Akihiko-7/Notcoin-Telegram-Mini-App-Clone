@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: sans-serif;
+}
+.bg-gradient-main{
+    background: linear-gradient(to top,#fba007,#ffc630);
+}
+.bg-gradient-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0,1) 40%, rgba(0,212,255,0) 100%);
+}
+.radial-gradient-overlay {
+    position:absolute;
+    width: 100%;
+    background: radial-gradient(circle, rgba(250, 214,92, 0.8) 0%, rgba(250, 214, 92c, 0) 60%)
+}
+
+@keyframes floatAndFade {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -100%) scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -150%) scale(1.4);
+    }
+  }
+  
+  .animate-float {
+    animation: floatAndFade 1s ease-out forwards;
+  }
